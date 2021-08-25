@@ -1,4 +1,8 @@
 /*colors to be used*/
+.body {
+  color: white;
+}
+
 .container {
   background-color: #ff652f;
   display: grid;
@@ -31,12 +35,11 @@
 .menu {
   background-color: #ff652f;
   /*    grid-row: 1/3;*/
-  grid-column: min-start/min-end;
 }
 
 .content {
   background-color: blue;
-  grid-column: min-start/min-end;
+  grid-area: content;
   /*
   grid-column: 2/-1;
   */
@@ -47,4 +50,25 @@
   grid-column: min-start/min-end;
   /*
   grid-column: 1/-1;*/
+}
+
+h1 {
+  color: black;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.list {
+  padding-left: 0;
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 80px;
+}
+.list hover {
+  background-color: burlywood;
 }/*# sourceMappingURL=basic.css.map */
