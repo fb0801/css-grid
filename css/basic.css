@@ -2,16 +2,20 @@
 .container {
   background-color: #ff652f;
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: repeat(2, 100px);
   /* grid-template-columns: repeat(3,1fr); /*previous numbers: 100px 1fr*/
   /*grid-template-rows: repeat(2,50px); /*previous numbers 500px*/
   /*grid-gap: 3px;*/
-  height: 100%;
-  display: grid;
-  grid-gap: 3px;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 40px auto 40px;
-  /*auto to take whatever space is left*/
-  grid-template-areas: "h h h h h h h h h h h h" "m c c c c c c c c c c c" "f f f f f f f f f f f f";
+  /* height: 100%;
+   display: grid;
+   grid-gap: 3px;
+   grid-template-columns: repeat(12,1fr);
+   grid-template-rows: 40px auto 40px; /*auto to take whatever space is left*/
+  /*  grid-template-areas: 
+    "h h h h h h h h h h h h"
+    "m c c c c c c c c c c c"
+    "f f f f f f f f f f f f";*/
 }
 
 .header {
