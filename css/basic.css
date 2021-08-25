@@ -1,5 +1,5 @@
 /*colors to be used*/
-.body {
+.body, .footer, .content, .menu, .header, .container {
   color: white;
 }
 
