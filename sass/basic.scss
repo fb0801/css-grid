@@ -7,10 +7,13 @@
 .container{
     background-color: $secondary-color;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));//autofit and minmax
+    grid-gap: 3px;
+    grid-template-columns: [main-start] 1fr [content-start] 5fr [content-end];
+    grid-template-rows: 40px auto 40px;
+    //grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));//autofit and minmax
     //grid-template-rows: repeat(2, 100px);
-    grid-template-rows: 100px 100px;//implicit rows
-    grid-auto-rows: 100px;
+    //grid-template-rows: 100px 100px;//implicit rows
+   // grid-auto-rows: 100px;
 
    /* grid-template-columns: repeat(3,1fr); /*previous numbers: 100px 1fr*/ 
     /*grid-template-rows: repeat(2,50px); /*previous numbers 500px*/
@@ -30,7 +33,8 @@
 
 .header{
     background-color: $forth-color;
-grid-area: h;
+    grid-column: min-start / min-end;
+//grid-area: h;
     /*grid-column: 2/-1;
     
     grid-column-start: 1;
@@ -40,21 +44,26 @@ grid-area: h;
 .menu{
     background-color: $secondary-color;
 /*    grid-row: 1/3;*/
-grid-area: m;
+//grid-area: m;
+grid-column: min-start / min-end;
+
 }
 
 .content{
     background-color: $forth-color;
+    grid-column: min-start / min-end;
     /*
     grid-column: 2/-1;
     */
-    grid-area: c;
+    //grid-area: c;
 }
 
 .footer{
     background-color: $third-color;
+
+    grid-column: min-start / min-end;
     /*
     grid-column: 1/-1;*/
-    grid-area: f;
+    //grid-area: f;
 
 }

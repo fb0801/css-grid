@@ -2,9 +2,9 @@
 .container {
   background-color: #ff652f;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  grid-template-rows: 100px 100px;
-  grid-auto-rows: 100px;
+  grid-gap: 3px;
+  grid-template-columns: [main-start] 1fr [content-start] 5fr [content-end];
+  grid-template-rows: 40px auto 40px;
   /* grid-template-columns: repeat(3,1fr); /*previous numbers: 100px 1fr*/
   /*grid-template-rows: repeat(2,50px); /*previous numbers 500px*/
   /*grid-gap: 3px;*/
@@ -21,7 +21,7 @@
 
 .header {
   background-color: blue;
-  grid-area: h;
+  grid-column: min-start/min-end;
   /*grid-column: 2/-1;
 
   grid-column-start: 1;
@@ -31,20 +31,20 @@
 .menu {
   background-color: #ff652f;
   /*    grid-row: 1/3;*/
-  grid-area: m;
+  grid-column: min-start/min-end;
 }
 
 .content {
   background-color: blue;
+  grid-column: min-start/min-end;
   /*
   grid-column: 2/-1;
   */
-  grid-area: c;
 }
 
 .footer {
   background-color: yellow;
+  grid-column: min-start/min-end;
   /*
   grid-column: 1/-1;*/
-  grid-area: f;
 }/*# sourceMappingURL=basic.css.map */
