@@ -3,7 +3,8 @@
   background-color: #ff652f;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  grid-template-rows: repeat(2, 100px);
+  grid-template-rows: 100px 100px;
+  grid-auto-rows: 100px;
   /* grid-template-columns: repeat(3,1fr); /*previous numbers: 100px 1fr*/
   /*grid-template-rows: repeat(2,50px); /*previous numbers 500px*/
   /*grid-gap: 3px;*/
