@@ -1,37 +1,55 @@
-
+@import 'config';
 
 
 
 
 
 .container{
+    background-color: $secondary-color;
     display: grid;
    /* grid-template-columns: repeat(3,1fr); /*previous numbers: 100px 1fr*/ 
     /*grid-template-rows: repeat(2,50px); /*previous numbers 500px*/
     /*grid-gap: 3px;*/
 
+    height: 100%;
+    display: grid;
     grid-gap: 3px;
     grid-template-columns: repeat(12,1fr);
-    grid-template-rows: 40px 200px 40px;
+    grid-template-rows: 40px auto 40px; /*auto to take whatever space is left*/
+    grid-template-areas: 
+    "h h h h h h h h h h h h"
+    "m c c c c c c c c c c c"
+    "f f f f f f f f f f f f";
 }
 
 
 .header{
-    grid-column: 2/-1;
-    /*
+    background-color: $forth-color;
+grid-area: h;
+    /*grid-column: 2/-1;
+    
     grid-column-start: 1;
     grid-column-end: ;*/
 }
 
 .menu{
-    grid-row: 1/3;
+    background-color: $secondary-color;
+/*    grid-row: 1/3;*/
+grid-area: m;
 }
 
 .content{
+    background-color: $forth-color;
+    /*
     grid-column: 2/-1;
+    */
+    grid-area: c;
 }
 
 .footer{
-    grid-column: 1/-1;
+    background-color: $third-color;
+    /*
+    grid-column: 1/-1;*/
+    grid-area: f;
 
 }
